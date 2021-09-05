@@ -3,7 +3,6 @@
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\FormController;
 use App\Http\Controllers\API\ScoreController;
-use App\Models\Score;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -38,7 +37,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::get('/student', [ScoreController::class, 'allStudent']);
     Route::get('/student/{id}', [ScoreController::class, 'studentDetail']);
 
-    Route::get('/logout', [AuthController::class, 'logout']) ;
+    Route::get('/logout', [AuthController::class, 'logout']);
 });
 
 // Data student dari database
