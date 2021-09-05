@@ -38,7 +38,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::get('/student', [ScoreController::class, 'allStudent']);
     Route::get('/student/{id}', [ScoreController::class, 'studentDetail']);
 
-    Route::get('/logout', [AuthController::class, 'logout']);
+    Route::get('/logout', [AuthController::class, 'logout']) ;
 });
 
 // Data student dari database
